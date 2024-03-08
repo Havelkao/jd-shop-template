@@ -1,0 +1,52 @@
+{% extends 'layout.html' %} {% block content %}
+
+<div>
+    <h2>Category</h2>
+
+    <p>
+        <strong
+            >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem
+            cumque, quas omnis maxime harum expedita.</strong
+        >
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+        ullam, vitae atque doloribus officiis odio voluptatem explicabo maxime
+        cumque nulla minus, sed assumenda aut incidunt pariatur eligendi sint?
+        Ex, ab voluptas voluptatem excepturi facilis corporis recusandae harum
+        nisi culpa consequatur?
+    </p>
+</div>
+
+<div>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        {% for i in range(5) %}
+        <div class="col">
+            <div class="card p-2">
+                <img
+                    src="https://dummyimage.com/270x200/000/fff"
+                    class="card-img-top"
+                    alt="" />
+                <div class="card-body p-1">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text small">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                    </p>
+                    <div class="small">Obvykle 1-2 týdny</div>
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <strong>3 900,00Kč</strong>
+                            <div class="small">bez DPH</div>
+                        </div>
+                        <a href="#" class="btn btn-primary align-self-center"
+                            >Koupit</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}

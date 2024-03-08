@@ -1,0 +1,298 @@
+{% extends 'layout.html' %} {% block content %}
+<div class="row gx-0">
+    <h4 class="mb-3">
+        <span>Your cart</span>
+    </h4>
+    <ul class="list-group">
+        {% for i in range(2) %}
+        <li class="list-group-item d-flex align-items-center">
+            <div class="col-5 col-md-8">
+                <h6 class="my-0">Product name</h6>
+                <small class="text-muted">Brief description</small>
+            </div>
+
+            <div class="d-flex align-items-center col-7 col-md-4">
+                <div class="input-group">
+                    <button class="btn border" type="button" id="remove">
+                        -
+                    </button>
+                    <input
+                        type="number"
+                        class="form-control text-center bg-white"
+                        id="count"
+                        disabled
+                        value="1" />
+                    <button class="btn border" type="button" id="add">+</button>
+                </div>
+                <span class="text-muted col-4 text-end">$12</span>
+            </div>
+        </li>
+        {% endfor %}
+
+        <li class="list-group-item d-flex justify-content-between">
+            <strong>Total</strong>
+            <strong>$24</strong>
+        </li>
+    </ul>
+
+    <h4 class="mb-3 mt-4">Billing address</h4>
+    <form>
+        <div class="row g-3">
+            <div class="col-sm-6">
+                <label for="ba-firstName" class="form-label">First name</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    id="ba-firstName"
+                    required />
+            </div>
+
+            <div class="col-sm-6">
+                <label for="ba-lastName" class="form-label">Last name</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    id="ba-lastName"
+                    required />
+            </div>
+
+            <div class="col-12">
+                <label for="ba-email" class="form-label"
+                    >Email <span class="text-muted"></span
+                ></label>
+                <input
+                    type="email"
+                    class="form-control"
+                    id="ba-email"
+                    placeholder="you@example.com" />
+            </div>
+
+            <div class="col-12 col-md-8">
+                <label for="ba-address" class="form-label">Address</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    id="ba-address"
+                    placeholder="1234 Main St"
+                    required />
+            </div>
+
+            <div class="col-12 col-md-4">
+                <label for="ba-zip" class="form-label">Zip</label>
+                <input type="text" class="form-control" id="ba-zip" required />
+                <div class="invalid-feedback">Zip code required.</div>
+            </div>
+
+            <div class="col-12 col-sm-8">
+                <label for="ba-city" class="form-label">City</label>
+                <input type="text" class="form-control" id="ba-city" required />
+                <div class="invalid-feedback">
+                    Please enter your shipping address.
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <label for="ba-country" class="form-label">Country</label>
+                <select class="form-select" id="ba-country" required="">
+                    <option value="">Choose...</option>
+                </select>
+                <div class="invalid-feedback">
+                    Please select a valid country.
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-4" />
+
+        <div class="form-check mb-3">
+            <input
+                checked
+                type="checkbox"
+                data-bs-toggle="collapse"
+                data-bs-target="#billing2"
+                class="form-check-input"
+                id="same-address" />
+            <label class="form-check-label" for="same-address"
+                >Shipping address is the same as my billing address</label
+            >
+        </div>
+
+        <div class="row g-3 collapse" id="billing2">
+            <div class="col-sm-6">
+                <label for="firstName" class="form-label">First name</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    id="firstName"
+                    placeholder=""
+                    value=""
+                    required="" />
+                <div class="invalid-feedback">
+                    Valid first name is required.
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <label for="lastName" class="form-label">Last name</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    id="lastName"
+                    placeholder=""
+                    value=""
+                    required="" />
+                <div class="invalid-feedback">Valid last name is required.</div>
+            </div>
+
+            <div class="col-12">
+                <label for="email" class="form-label"
+                    >Email <span class="text-muted"></span
+                ></label>
+                <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="you@example.com" />
+                <div class="invalid-feedback">
+                    Please enter a valid email address for shipping updates.
+                </div>
+            </div>
+
+            <div class="col-12 col-md-8">
+                <label for="address" class="form-label">Address</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    id="address"
+                    placeholder="1234 Main St"
+                    required="" />
+                <div class="invalid-feedback">
+                    Please enter your shipping address.
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <label for="zip" class="form-label">Zip</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    id="zip"
+                    placeholder=""
+                    required="" />
+                <div class="invalid-feedback">Zip code required.</div>
+            </div>
+
+            <div class="col-12 col-sm-8">
+                <label for="city" class="form-label">City</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    id="city"
+                    placeholder="City"
+                    required="" />
+                <div class="invalid-feedback">
+                    Please enter your shipping address.
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <label for="country" class="form-label">Country</label>
+                <select class="form-select" id="country" required="">
+                    <option value="">Choose...</option>
+                </select>
+                <div class="invalid-feedback">
+                    Please select a valid country.
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-4" />
+
+        <div class="row">
+            <div class="mb-3 col-6">
+                <h4>Means of delivery</h4>
+                <div class="my-3">
+                    <div class="form-check">
+                        <input
+                            id="dpd"
+                            name="delivery-means"
+                            type="radio"
+                            class="form-check-input"
+                            checked=""
+                            required="" />
+                        <label class="form-check-label" for="dpd">DPD</label>
+                    </div>
+                    <div class="form-check">
+                        <input
+                            id="method2"
+                            name="delivery-means"
+                            type="radio"
+                            class="form-check-input"
+                            required="" />
+                        <label class="form-check-label" for="method2"
+                            >method2</label
+                        >
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3 col-6">
+                <h4 class="mb-3 col-6">Payment</h4>
+
+                <div class="my-3">
+                    <div class="form-check">
+                        <input
+                            id="credit"
+                            name="paymentMethod"
+                            type="radio"
+                            class="form-check-input"
+                            checked=""
+                            required="" />
+                        <label class="form-check-label" for="credit"
+                            >Credit card</label
+                        >
+                    </div>
+                    <div class="form-check">
+                        <input
+                            id="debit"
+                            name="paymentMethod"
+                            type="radio"
+                            class="form-check-input"
+                            required="" />
+                        <label class="form-check-label" for="debit"
+                            >Debit card</label
+                        >
+                    </div>
+                    <div class="form-check">
+                        <input
+                            id="paypal"
+                            name="paymentMethod"
+                            type="radio"
+                            class="form-check-input"
+                            required="" />
+                        <label class="form-check-label" for="paypal"
+                            >PayPal</label
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-4" />
+
+        <div class="form-check mb-3">
+            <input
+                type="checkbox"
+                class="form-check-input"
+                id="terms-checkbox" />
+            <label class="form-check-label" for="terms-checkbox"
+                ><strong>I agree with the terms and conditions</strong></label
+            >
+        </div>
+
+        <button class="w-100 btn btn-primary btn-lg" type="submit">
+            Binding purchase order
+        </button>
+    </form>
+</div>
+{% endblock content %}

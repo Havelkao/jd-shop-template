@@ -1,0 +1,145 @@
+{% extends 'layout.html' %} {% block content %}
+<h2>Product name</h2>
+<p>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia quis fuga
+    distinctio? Inventore, natus voluptatum nostrum, reiciendis a obcaecati
+    architecto quod iure eveniet quibusdam impedit accusamus tempore illo amet
+    nisi.
+</p>
+
+<div class="row">
+    <!-- Main image -->
+    <div class="col-6">
+        <img
+            src="https://dummyimage.com/270x200/000/fff"
+            class="card-img-top"
+            alt="" />
+    </div>
+    <!-- Main -->
+    <div class="col-6">
+        <div class="d-flex align-items-end">
+            <span class="h2 mb-0 me-2">1 911,80 Kč</span>
+            <div class="muted">bez DPH</div>
+        </div>
+
+        <div class="muted mb-3">1 911,80 Kč s DPH</div>
+
+        <div class="row mb-3">
+            <div class="input-group col">
+                <button class="btn border" type="button" id="remove">-</button>
+                <input
+                    type="number"
+                    class="form-control text-center bg-white"
+                    id="count"
+                    disabled
+                    value="1" />
+                <button class="btn border" type="button" id="add">+</button>
+            </div>
+
+            <button class="btn btn-primary col">Add to cart</button>
+        </div>
+
+        <div class="text-primary">Skladem méně než 3ks</div>
+    </div>
+
+    <!-- Carousel -->
+    <div id="carouselExample" class="carousel slide mt-3">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row">
+                    <div class="col-3">
+                        <img src="https://dummyimage.com/200x200/000/fff" />
+                    </div>
+                    <div class="col-3">
+                        <img src="https://dummyimage.com/200x200/000/fff" />
+                    </div>
+                    <div class="col-3">
+                        <img src="https://dummyimage.com/200x200/000/fff" />
+                    </div>
+                    <div class="col-3">
+                        <img src="https://dummyimage.com/200x200/000/fff" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-3">
+                        <img src="https://dummyimage.com/200x200/000/fff" />
+                    </div>
+                    <div class="col-3">
+                        <img src="https://dummyimage.com/200x200/000/fff" />
+                    </div>
+                    <div class="col-3">
+                        <img src="https://dummyimage.com/200x200/000/fff" />
+                    </div>
+                    <div class="col-3">
+                        <img src="https://dummyimage.com/200x200/000/fff" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Description -->
+    <div class="mt-3">
+        <h3>Description</h3>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. In autem,
+            tempora facere magni possimus, dolorem vero minus obcaecati mollitia
+            molestiae nesciunt quae tempore ad exercitationem illum dolorum
+            incidunt a quasi necessitatibus ipsum reprehenderit voluptatum
+            itaque ipsa voluptate? Assumenda ipsum dolor obcaecati blanditiis,
+            animi iusto quaerat voluptate sint et ipsam voluptatem adipisci quia
+            vel error facilis voluptatibus eos voluptates a possimus sunt
+            delectus? Quis facere modi quam, eaque deleniti eius quo fugit
+            eveniet dolor quibusdam placeat dolorem esse nobis doloremque vitae
+            dignissimos deserunt nulla voluptatum aperiam? Esse, optio quaerat.
+            Tenetur eveniet eum quaerat exercitationem est aliquam consequatur
+            quis nam neque unde molestiae eos assumenda maiores cupiditate qui,
+            voluptates veritatis alias! Nemo quibusdam non quia, facilis tempore
+            vitae eaque pariatur unde quasi voluptas ipsa laudantium nobis
+            eveniet maxime quod alias amet similique natus exercitationem
+            dolorem aspernatur magnam adipisci voluptatum? Qui ducimus
+            temporibus dolorum necessitatibus ipsum doloremque voluptas unde est
+            dolores rem facilis incidunt molestias doloribus neque delectus,
+            natus maxime cupiditate soluta ex dolor fugiat architecto cumque
+            inventore nisi? Eveniet reiciendis soluta officiis quod, iste natus
+            architecto voluptatibus rerum esse facilis. Ad porro at similique
+            explicabo quas. Veniam error ipsa eveniet quas hic! Eos obcaecati et
+            tempore deserunt voluptate laboriosam molestias, quisquam sunt.
+        </p>
+    </div>
+</div>
+
+{%endblock content %}
+
+<!-- 
+product-detail: 
+	- obrazek, cena bez DPH, cena s DPH (mensi), pocet kusu, koupit, skladem
+	- prolink na "datasheet" a prolink na "quick start guide"
+	- ostatni obrazky
+
+	- dale bude popis, coz bude mix textovych odstavcu a obrazku na plnou sirku panelu	
+	- vypis prislusenstvi ("radkovy vypis kategorie")
+	
+	- TBD
+	
+
+ -->

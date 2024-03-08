@@ -1,0 +1,21 @@
+:root {
+    --bg-color: rgba(32, 33, 36, 1);
+    --font-color: rgb(236, 236, 236);
+    --font-size: 1rem;
+    --color-primary: hsl(67, 21%, 93%);
+    --color-secondary: #e9e9e9;
+    --color-tertiary: #207aa4;
+}
+
+/* Remove default styling */
+/* For WebKit browsers (Chrome, Safari, and newer versions of Opera) */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* For Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
